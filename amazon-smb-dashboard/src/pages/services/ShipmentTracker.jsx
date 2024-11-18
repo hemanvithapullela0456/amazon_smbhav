@@ -11,9 +11,11 @@ const ShipmentTracker = () => {
 
     return (
         <div className="shipment-tracker">
-            {/* Left Sidebar for Chatbot */}
+            {/* Left Sidebar */}
             <div className="left-sidebar">
-                <h1>Shipment Tracker & Live Updates</h1>
+                {/* Heading */}
+                <h1 className="main-heading">Shipment Tracker & Live Updates</h1>
+
                 {/* Chatbot Icon */}
                 <img
                     src="/images/chatbot.png"
