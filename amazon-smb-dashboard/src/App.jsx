@@ -1,6 +1,6 @@
 // src/App.jsx
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar"
+import Navbar from "./components/Navbar";
 import DocumentGenerator from "./pages/services/DocumentGenerator";
 import CarrierComparison from "./pages/services/CarrierComparison";
 import ShipmentTracker from "./pages/services/ShipmentTracker";
