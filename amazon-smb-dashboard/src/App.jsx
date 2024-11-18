@@ -6,7 +6,7 @@ import CarrierComparison from "./pages/services/CarrierComparison";
 import ShipmentTracker from "./pages/services/ShipmentTracker";
 import ResolveQueries from "./pages/services/ResolveQueries";
 
-//hey it me
+//hey its me
 function App() {
   return (
     <Router>
