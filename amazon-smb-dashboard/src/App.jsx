@@ -5,6 +5,7 @@ import DocumentGenerator from "./pages/services/DocumentGenerator";
 import CarrierComparison from "./pages/services/CarrierComparison";
 import ShipmentTracker from "./pages/services/ShipmentTracker";
 import ResolveQueries from "./pages/services/ResolveQueries";
+import HomeComponent from "./pages/HomeComponent";
 
 //hey its me
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <Router>
       <div>
         <Navbar />
+        <HomeComponent/>
         <Routes>
           <Route path="/services/document-generator" element={<DocumentGenerator />} />
           <Route path="/services/carrier-comparison" element={<CarrierComparison />} />
