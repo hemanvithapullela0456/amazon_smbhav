@@ -1,10 +1,10 @@
 // src/App.jsx
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import DocumentGenerator from "./services/DocumentGenerator";
-import CarrierComparison from "./services/CarrierComparison";
-import ShipmentTracker from "./services/ShipmentTracker";
-import ResolveQueries from "./services/ResolveQueries";
+import DocumentGenerator from "./pages/services/DocumentGenerator";
+import CarrierComparison from "./pages/services/CarrierComparison";
+import ShipmentTracker from "./pages/services/ShipmentTracker";
+import ResolveQueries from "./pages/services/ResolveQueries";
 
 function App() {
   return (
