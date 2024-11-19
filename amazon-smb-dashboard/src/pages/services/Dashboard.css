@@ -1,0 +1,239 @@
+/* App Layout */
+.app {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .main-content {
+    display: flex;
+    min-height: 100vh; /* Full height */
+    width: 100vw; /* Full width */
+    overflow: hidden; /* Prevent any scrollbars */
+  }
+  
+  h1, h2, h3, h4, p {
+    margin: 0;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 17%; /* Sidebar occupies 20% of the screen width */
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+  }
+  
+/* Welcome Message */
+  .welcome-message {
+    font-size: 18px; /* Slightly larger font */
+    font-weight: bold; /* Emphasize the welcome text */
+    color: #000; /* Black color */
+    margin-bottom: 5px; /* Add spacing below the welcome text */
+    text-align: center; /* Center align the text */
+  }
+  
+  /* User ID */
+  .user-id {
+    font-weight: bold;
+    padding: 10px;
+    background-color: #FF9900;
+    border-radius: 15px; /* Curved edges */
+    text-align: center;
+    color: white;
+    margin-bottom: 5px; /* Spacing below the User ID container */
+  }
+  
+  /* Sidebar Menu Container */
+  .menu-container {
+    padding: 20px;
+    border: 2px solid #FF9900; /* Border color */
+    border-radius: 15px; /* Rounded edges */
+    background-color: #fff; /* White background for the container */
+    box-sizing: border-box;
+  }
+
+  /* Recent Trips Container */
+.recent-trips-container {
+    padding: 15px;
+    border: 2px solid #FF9900; /* Border color */
+    border-radius: 15px; /* Rounded edges */
+    background-color: #fff; /* White background */
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+  
+  /* Recent Trips Heading */
+  .recent-trips h3 {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    color: #000000; /* Heading matches theme color */
+  }
+  
+  /* Recent Trips List Items */
+  .recent-trips p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: black; /* Default text color */
+  }
+  
+  /* Highlighted Recent Trip */
+  .recent-trips .highlighted-trip {
+    color: #FF9900; /* Orange color for highlighted text */
+    text-decoration: underline; /* Underline for emphasis */
+    font-weight: bold; /* Make it stand out */
+  }
+  
+  /* Sidebar Menu */
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .menu-item {
+    padding: 15px 10px; /* Adjust padding for box size */
+    border: 2px solid transparent; /* Default border transparent */
+    text-align: center;
+    border-radius: 5px;
+    background-color: #ffffff; /* White background for unselected menu items */
+    color: #000;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  
+  .menu-item.highlighted {
+    background-color: #FF9900; /* Highlighted background color */
+    color: white; /* Highlighted text color */
+    border-color: #FF9900; 
+  }
+  
+  .menu-item:hover {
+    background-color: #FFE5B4;
+  }
+  
+  /* Recent Trips */
+  .recent-trips h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  /* Dashboard Content */
+  .dashboard {
+    flex: 1; /* Dashboard takes up the remaining 80% of the screen */
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .map-container {
+    background-color: #e0e0e0;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-shrink: 0; /* Prevent shrinking */
+  }
+  
+  .seller-details {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+  }
+  
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  /* Metrics */
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  /* Metric Cards */
+  .metrics-card {
+    padding: 20px;
+    background-color: #ffedcc;
+    text-align: center;
+    border: 1px solid #ffd966;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  
+  .metrics-card h4 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  
+  .metrics-card p {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  /* Metrics Section */
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns for one row */
+    gap: 10px; /* Spacing between cards */
+  }
+  
+  .metrics-card {
+    height: 100px; /* Square shape */
+    width: 100px; /* Square shape */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #FF9900; /* Border color */
+    color: #000000; /* Text color */
+    border-radius: 0; /* Remove rounded corners */
+    box-sizing: border-box;
+  }
+  
+  /* Seller Details Container */
+  .seller-details {
+    padding: 20px;
+    border: 2px solid #000000; /* Black border */
+    border-radius: 10px; /* Rounded edges */
+    background-color: #fff;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  
+  /* Seller Details Grid */
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 10px;
+  }
+  
+  /* Seller Details Items */
+  .details-grid div {
+    background-color: #FFE7C2; /* Light beige color */
+    padding: 10px;
+    border-radius: 5px; /* Rounded edges */
+    color: #000000; /* Black text color */
+    text-align: center; /* Center-align text */
+  }
+  
+  
