@@ -1,13 +1,23 @@
 import React from 'react';
 import './Dashboard.css';
+import { FaUser } from "react-icons/fa";
+import { IconContext } from "react-icons";
+
 
 const Dashboard = () => {
   return (
+    
+<IconContext.Provider value={{ color: "black", size: "1em", className: "global-class-name" }}>
     <div className="app">
       <div className="main-content">
         {/* Sidebar */}
         <div className="sidebar">
-          <div className="welcome-message">Welcome back, User!</div>
+          
+          <div className="welcome-message">
+            <FaUser/>
+            Welcome back, User!
+          </div> 
+          
           <div className="user-id">USER ID: 20034567</div>
 
           <div className="menu-container">
@@ -40,6 +50,7 @@ const Dashboard = () => {
           {/* Seller Details */}
           <div className="seller-details">
             <h3>Seller Details</h3>
+            <div className="ravi-label">RAVI098789</div>
             <div className="details-grid">
               <div>Parcels Paid: $27K</div>
               <div>Date of Arrival: 28.10.2024</div>
@@ -60,6 +71,7 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
+    </IconContext.Provider>
   );
 };
 
