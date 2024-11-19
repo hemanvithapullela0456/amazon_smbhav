@@ -1,11 +1,12 @@
-/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap'); 
 .shipment-tracker {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Hanken Grotesk', sans-serif;
     background-color: #F0F3FF;
     color: #333;
     display: flex;
     flex-direction: row;
     padding: 20px;
+    padding-left: 40px;
     gap: 20px;
     height: 100vh;
     width:96.3vw; /* Full viewport height */
@@ -140,141 +141,6 @@
     top: 0;
     width: 100%;
 }
-/* Left Sidebar */
-.left-sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 500px;
-    position: relative;
-}
-
-/* Chatbot icon stays at the bottom */
-.chatbot-icon {
-    width: 50px;
-    cursor: pointer;
-    margin-top: auto; /* Pushes the icon to the bottom */
-    margin-bottom: 10px;
-    position: fixed;
-    bottom: 20px; /* Positioned at the bottom of the screen */
-    left: 20px; /* Positioned slightly from the left */
-}
-
-/* Chat box appears just above the chatbot icon */
-.chat-box {
-    position: fixed;
-    bottom: 80px; /* 60px for the icon's height + 20px padding */
-    left: 20px; /* Align with the icon */
-    width: 300px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-size: 0.9rem;
-    z-index: 100;
-}
-
-/* Chat header styles remain the same */
-.chat-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
-    border-bottom: 1px solid #ddd;
-}
-
-.chat-buttons button {
-    background-color: #004aad;
-    color: white;
-    border: none;
-    padding: 8px;
-    border-radius: 5px;
-    margin: 5px 5px 0 0;
-    font-size: 0.85rem;
-    cursor: pointer;
-}
-
-.chat-buttons button:hover {
-    background-color: #00307a;
-}
-/* General Styles */
-.shipment-tracker {
-    font-family: 'Arial', sans-serif;
-    background-color: #F0F3FF;
-    color: #333;
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    gap: 20px;
-    height: 100vh;
-    width:96.3vw; /* Full viewport width */
-}
-
-/* Left Sidebar */
-.left-sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 500px;
-    position: relative;
-}
-
-/* Chatbot icon stays at the bottom of the screen */
-.chatbot-icon {
-    width: 50px;
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px; /* Positioned at the bottom of the screen */
-    left: 20px; /* Positioned slightly from the left */
-    z-index: 200;
-}
-
-/* Chatbox appears just above the chatbot icon */
-.chat-box {
-    position: fixed;
-    bottom: 60px; /* Space between the icon and the box */
-    left: 20px; /* Align with the icon */
-    width: 50vw; /* Half of the screen width */
-    max-width: 400px; /* Optional max-width */
-    height: 50vh; /* Bottom half of the screen height */
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-size: 0.9rem;
-    z-index: 100;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Chat header styles */
-.chat-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
-    border-bottom: 1px solid #ddd;
-}
-
-/* Button styles in the chatbox */
-.chat-buttons button {
-    background-color: #004aad;
-    color: white;
-    border: none;
-    padding: 8px;
-    border-radius: 5px;
-    margin: 5px 5px 0 0;
-    font-size: 0.85rem;
-    cursor: pointer;
-}
-
-.chat-buttons button:hover {
-    background-color: #00307a;
-}
 
 /* Other sections of the page */
 .right-content {
@@ -289,18 +155,7 @@
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-/* General Styles */
-.shipment-tracker {
-    font-family: 'Arial', sans-serif;
-    background-color: #F0F3FF;
-    color: #333;
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    gap: 20px;
-    height: 100vh;
-    width: 96.3vw; /* Full viewport width */
-}
+
 
 /* Left Sidebar */
 .left-sidebar {
@@ -384,6 +239,7 @@
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
 }
 .chat-container {
     position: relative;  /* Positioning context for the icon and chatbox */
@@ -437,5 +293,21 @@
 
 .chat-buttons button:hover {
     background-color: #00307a;
+}
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 500px;
+    position: relative;
+    margin-top: 50px; /* Push the entire left sidebar content down */
+}
+
+.main-heading {
+    font-size: 2rem; /* Increased font size */
+    font-weight: bold;
+    text-align: left;
+    color: #004aad;
+    margin-top: -20px; /* Adjust spacing specifically for the heading */
 }
 
