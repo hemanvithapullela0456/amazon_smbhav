@@ -13,8 +13,8 @@ function App() {
     <Router>
       <div>
         <Navbar />
-        <HomeComponent/>
         <Routes>
+          <Route path="/" element={<HomeComponent/>}/>
           <Route path="/services/document-generator" element={<DocumentGenerator />} />
           <Route path="/services/carrier-comparison" element={<CarrierComparison />} />
           <Route path="/services/shipment-tracker" element={<ShipmentTracker />} />

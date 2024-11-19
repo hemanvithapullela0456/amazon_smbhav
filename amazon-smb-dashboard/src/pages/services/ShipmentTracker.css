@@ -1,175 +1,441 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f4ff;
-}
-
-/* Main Container */
+/* General Styles */
 .shipment-tracker {
+    font-family: 'Arial', sans-serif;
+    background-color: #F0F3FF;
+    color: #333;
     display: flex;
-    height: 100vh;
+    flex-direction: row;
     padding: 20px;
+    gap: 20px;
+    height: 100vh;
+    width:96.3vw; /* Full viewport height */
 }
 
 /* Left Sidebar */
 .left-sidebar {
-    width: 220px;
-    padding: 20px;
-    background-color: #fff;
-    border-right: 1px solid #ddd;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
+    width: 500px; /* Fixed width for the left section */
 }
 
 .main-heading {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 2rem; /* Increased font size */
+    font-weight: bold;
+    text-align: left;
+    color: #004aad;
 }
 
-/* Chatbot Icon */
 .chatbot-icon {
     width: 50px;
-    height: 50px;
     cursor: pointer;
-    margin-top: auto;
-    transition: transform 0.2s ease-in-out;
+    margin-bottom: 10px;
 }
 
-.chatbot-icon:hover {
-    transform: scale(1.1);
-}
-
-/* Chatbox Styling */
 .chat-box {
-    position: absolute;
-    top: 20px;
-    left: 250px;
-    width: 280px;
-    height: 65%;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Right Section Layout */
+.right-content {
+    display: grid;
+    grid-template-columns: 600px 250px; /* Map + Alerts side-by-side */
+    grid-template-rows: 350px 150px; /* Map/Alert above Time/Notifications */
+    gap: 10px; /* Space between sections */
+    width: 850px; /* Fixed width for right section */
+    height: 500px; /* Fixed height */
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Map Section */
+.map-section {
+    grid-column: 1 / 2; /* First column */
+    grid-row: 1 / 2; /* First row */
+    background: #eaeaea;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevent distortion */
+    border-radius: 8px;
+}
+
+/* Alert Section */
+.alert-box {
+    grid-column: 2 / 3; /* Second column */
+    grid-row: 1 / 2; /* First row */
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Time Left Section */
+.time-left {
+    grid-column: 1 / 2; /* First column */
+    grid-row: 2 / 3; /* Second row */
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-left h2 {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.time {
+    font-size: 1.3rem;
+    color: #e63946;
+}
+
+/* Notifications Section */
+.update-box {
+    grid-column: 2 / 3; /* Second column */
+    grid-row: 2 / 3; /* Second row */
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Chatbox Toggle on Top */
+.left-sidebar {
+    position: relative;
+}
+
+.chat-box {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+/* Left Sidebar */
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 500px;
+    position: relative;
+}
+
+/* Chatbot icon stays at the bottom */
+.chatbot-icon {
+    width: 50px;
+    cursor: pointer;
+    margin-top: auto; /* Pushes the icon to the bottom */
+    margin-bottom: 10px;
+    position: fixed;
+    bottom: 20px; /* Positioned at the bottom of the screen */
+    left: 20px; /* Positioned slightly from the left */
+}
+
+/* Chat box appears just above the chatbot icon */
+.chat-box {
+    position: fixed;
+    bottom: 80px; /* 60px for the icon's height + 20px padding */
+    left: 20px; /* Align with the icon */
+    width: 300px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    z-index: 100;
+}
+
+/* Chat header styles remain the same */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-buttons button {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px 5px 0 0;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.chat-buttons button:hover {
+    background-color: #00307a;
+}
+/* General Styles */
+.shipment-tracker {
+    font-family: 'Arial', sans-serif;
+    background-color: #F0F3FF;
+    color: #333;
+    display: flex;
+    flex-direction: row;
     padding: 20px;
-    z-index: 1000;
+    gap: 20px;
+    height: 100vh;
+    width:96.3vw; /* Full viewport width */
+}
+
+/* Left Sidebar */
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 500px;
+    position: relative;
+}
+
+/* Chatbot icon stays at the bottom of the screen */
+.chatbot-icon {
+    width: 50px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px; /* Positioned at the bottom of the screen */
+    left: 20px; /* Positioned slightly from the left */
+    z-index: 200;
+}
+
+/* Chatbox appears just above the chatbot icon */
+.chat-box {
+    position: fixed;
+    bottom: 60px; /* Space between the icon and the box */
+    left: 20px; /* Align with the icon */
+    width: 50vw; /* Half of the screen width */
+    max-width: 400px; /* Optional max-width */
+    height: 50vh; /* Bottom half of the screen height */
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat header styles */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Button styles in the chatbox */
+.chat-buttons button {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px 5px 0 0;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.chat-buttons button:hover {
+    background-color: #00307a;
+}
+
+/* Other sections of the page */
+.right-content {
+    display: grid;
+    grid-template-columns: 600px 250px; /* Map + Alerts side-by-side */
+    grid-template-rows: 350px 150px; /* Map/Alert above Time/Notifications */
+    gap: 10px; /* Space between sections */
+    width: 850px; /* Fixed width for right section */
+    height: 500px; /* Fixed height */
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* General Styles */
+.shipment-tracker {
+    font-family: 'Arial', sans-serif;
+    background-color: #F0F3FF;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 20px;
+    height: 100vh;
+    width: 96.3vw; /* Full viewport width */
+}
+
+/* Left Sidebar */
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 500px;
+    position: relative;
+}
+
+/* Chatbot icon stays at the bottom of the screen */
+.chatbot-icon {
+    width: 50px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px; /* Positioned at the bottom of the screen */
+    left: 20px; /* Positioned slightly from the left */
+    z-index: 200;
+}
+
+/* Chatbox appears just above the chatbot icon and takes bottom half of the screen */
+.chat-box {
+    position: fixed;  /* Make it fixed to the viewport */
+    bottom: 70px;  /* Position it just above the chatbot icon */
+    left: 20px;  /* Align it with the icon */
+    width: 50vw;  /* Half of the screen width */
+    max-width: 400px;  /* Optional max-width */
+    height: 50vh;  /* Bottom half of the screen height */
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    z-index: 100;
+    display: none;  /* Hidden by default */
+    flex-direction: column;
+}
+
+
+/* Show chatbox when active */
+.chat-box.open {
+    display: flex; /* Only visible when 'open' class is added */
+}
+
+/* Chat header styles */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Button styles in the chatbox */
+.chat-buttons button {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px 5px 0 0;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.chat-buttons button:hover {
+    background-color: #00307a;
+}
+
+/* Right content layout */
+.right-content {
+    display: grid;
+    grid-template-columns: 600px 250px; /* Map + Alerts side-by-side */
+    grid-template-rows: 350px 150px; /* Map/Alert above Time/Notifications */
+    gap: 10px; /* Space between sections */
+    width: 850px; /* Fixed width for right section */
+    height: 500px; /* Fixed height */
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.chat-container {
+    position: relative;  /* Positioning context for the icon and chatbox */
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: flex-start; /* Align the elements to the left */
+}
+
+.chatbot-icon {
+    width: 50px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Space between icon and chatbox */
+}
+
+.chat-box {
+    width: 50vw;  /* Half of the screen width */
+    max-width: 400px;  /* Optional max-width */
+    height: 50vh;  /* Bottom half of the screen height */
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;  /* Keep it inside the container */
+    bottom: 60px;  /* Position it just above the icon */
+    z-index: 100;
 }
 
 .chat-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
-}
-
-.close-chat {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.chat-message {
-    flex: 1;
-    margin-top: 10px;
-    color: #333;
-}
-
-.chat-note {
-    font-size: 0.85em;
-    color: #777;
-}
-
-.chat-note a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.chat-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ddd;
 }
 
 .chat-buttons button {
-    padding: 10px;
+    background-color: #004aad;
+    color: white;
     border: none;
+    padding: 8px;
     border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
+    margin: 5px 5px 0 0;
+    font-size: 0.85rem;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
 }
 
 .chat-buttons button:hover {
-    background-color: #0056b3;
+    background-color: #00307a;
 }
 
-/* Main Content Grid Layout */
-.main-content {
-    flex: 0.7;
-    display: grid;
-    grid-template-areas:
-        "map alerts"
-        "time updates";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 0.8fr;
-    gap: 10px;
-    padding: 10px;
-}
-
-/* Map Section */
-.map-section {
-    grid-area: map;
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.map-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* Alerts Section */
-.alert-box {
-    grid-area: alerts;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Time Left Section */
-.time-left {
-    grid-area: time;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.time-left .time {
-    font-size: 1.3em;
-    color: #ff9800;
-}
-
-/* Updates Section */
-.update-box {
-    grid-area: updates;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
