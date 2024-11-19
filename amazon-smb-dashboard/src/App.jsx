@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import DocumentGenerator from "./pages/services/DocumentGenerator";
 import CarrierComparison from "./pages/services/CarrierComparison";
 import ShipmentTracker from "./pages/services/ShipmentTracker";
-import ResolveQueries from "./pages/services/Dashboard";
+import Dashboard from "./pages/services/Dashboard";
 import HomeComponent from "./pages/HomeComponent";
 
 //hey its me
@@ -18,7 +18,7 @@ function App() {
           <Route path="/services/document-generator" element={<DocumentGenerator />} />
           <Route path="/services/carrier-comparison" element={<CarrierComparison />} />
           <Route path="/services/shipment-tracker" element={<ShipmentTracker />} />
-          <Route path="/services/resolve-queries" element={<ResolveQueries />} />
+          <Route path="/services/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
     </Router>
