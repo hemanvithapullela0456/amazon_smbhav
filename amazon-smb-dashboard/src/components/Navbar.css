@@ -44,7 +44,7 @@
   }
   
   .navbar-menu li span:hover {
-    color: #ffa500;
+    color: #ff9900;
   }
   
   .navbar-dropdown .dropdown-menu {
@@ -94,7 +94,7 @@
   }
   
   .signup {
-    background-color: #ffa500;
+    background-color: #ff9900;
     color: white;
     border: none;
   }
