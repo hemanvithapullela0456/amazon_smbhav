@@ -1,17 +1,15 @@
 /* Global styles */
+
 body {
-    font-family: Arial, sans-serif;
     background-color: #f0f4fc;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
   }
   
   /* Main container with full width */
   .comparison-container {
-    width: 100%;
+    width: 96vw;
     padding: 20px;
     margin: 0 auto;
+    color:#1a202c;
   }
   
   /* Title styling */
@@ -30,6 +28,7 @@ body {
     justify-content: space-around;
     gap: 15px;
     margin-bottom: 20px;
+    color: #1a202c;
   }
   
   .filter-group {
@@ -45,6 +44,7 @@ body {
     font-size: 14px;
     background-color: #fff;
     width: 180px;
+        color: #1a202c;
   }
   
   .filter-input {
