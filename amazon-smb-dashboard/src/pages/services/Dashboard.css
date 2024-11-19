@@ -162,78 +162,105 @@
     gap: 10px;
   }
   
-  /* Metrics */
-  .metrics {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
-  /* Metric Cards */
-  .metrics-card {
-    padding: 20px;
-    background-color: #ffedcc;
-    text-align: center;
-    border: 1px solid #ffd966;
-    border-radius: 10px;
-    box-sizing: border-box;
-  }
-  
-  .metrics-card h4 {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-  }
-  
-  .metrics-card p {
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-  
-  /* Metrics Section */
+/* Metrics Section */
+/* Metrics Section */
 .metrics {
     display: grid;
     grid-template-columns: repeat(6, 1fr); /* 6 columns for one row */
-    gap: 10px; /* Spacing between cards */
+    gap: 5px; /* Reduced gap between boxes */
   }
   
   .metrics-card {
-    height: 100px; /* Square shape */
-    width: 100px; /* Square shape */
+    height: 140px; /* Increased height */
+    width: 190px; /* Increased width */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
-    border: 2px solid #FF9900; /* Border color */
-    color: #000000; /* Text color */
-    border-radius: 0; /* Remove rounded corners */
-    box-sizing: border-box;
-  }
-  
-  /* Seller Details Container */
-  .seller-details {
-    padding: 20px;
-    border: 2px solid #000000; /* Black border */
-    border-radius: 10px; /* Rounded edges */
-    background-color: #fff;
-    color: #000000;
-    margin-bottom: 20px;
-  }
-  
-  /* Seller Details Grid */
-  .details-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two items per row */
-    gap: 10px;
-  }
-  
-  /* Seller Details Items */
-  .details-grid div {
-    background-color: #FFE7C2; /* Light beige color */
-    padding: 10px;
-    border-radius: 5px; /* Rounded edges */
-    color: #000000; /* Black text color */
     text-align: center; /* Center-align text */
+    background-color: #fff; /* Default background */
+    border: 2px solid #FF9900; /* Orange border */
+    color: #000000; /* Black text */
+    border-radius: 0; /* No rounded corners */
+    box-sizing: border-box;
+    padding: 10px; /* Increased padding for text */
+    font-size: 14px; /* Adjusted font size for readability */
+    line-height: 1.2; /* Adjusted line spacing */
   }
+  
+  .metrics-card:nth-child(odd) {
+    background-color: #FF9900; /* Alternate orange background */
+    color: #fff; /* White text for better contrast */
+  }
+  
+  .metrics-card h4 {
+    margin: 5px 0; /* Reduced margin */
+    font-size: 16px; /* Adjusted heading size */
+  }
+  
+  .metrics-card p {
+    margin: 0; /* Remove padding between lines */
+    font-size: 18px; /* Slightly larger for the value */
+    font-weight: bold;
+  }
+  
+  
+  /* Seller Details Section */
+.seller-details {
+    background-color: #fff; /* White background */
+    padding: 20px; /* Spacing around the container */
+    border-radius: 10px; /* Rounded edges */
+    border: 2px solid #000000; /* Black border */
+    margin-bottom: 20px; /* Spacing below */
+    text-align: center;
+  }
+  
+  /* Seller Details Heading */
+  .seller-details h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000; /* Black text */
+  }
+  
+  /* Ravi Label */
+  .seller-details .ravi-label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+    color: #000000; /* Black text */
+  }
+  
+  /* Seller Details Content */
+  .details-grid {
+    display: flex;
+    justify-content: space-between; /* Horizontal spacing */
+    align-items: center; /* Center vertically */
+    gap: 10px;
+    font-size: 14px; /* Adjust font size */
+    color: #000000; /* Black text */
+    background-color: #FFE7C2; /* Light orange background */
+    border-radius: 10px; /* Rounded edges */
+    padding: 10px; /* Spacing around content */
+  }
+  
+  .details-grid div {
+    flex: 1; /* Evenly distribute space */
+    text-align: center; /* Center each content block */
+    position: relative;
+  }
+  
+  .details-grid div:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15%;
+    bottom: 15%;
+    width: 1px; /* Thin vertical line */
+    background-color: #000000; /* Black color for line */
+  }
+  
+  
   
   
