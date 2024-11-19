@@ -1,18 +1,18 @@
 /* Global styles */
 
 body {
-  font-family: Arial, sans-serif;
   background-color: #f0f4fc;
   margin: 0;
-  padding: 0;
+  padding-top: 75px;
   box-sizing: border-box;
 }
 
 /* Main container with full width */
 .comparison-container {
-  width: 100%;
+  width: 96.3vw;
+  color:#1a202c;
   padding: 20px;
-  margin: 0 160px;
+  margin: 0 auto;
 }
 
 /* Title styling */
@@ -50,6 +50,7 @@ body {
   border: 1px solid #d1d5db;
   border-radius: 30px;
   font-size: 14px;
+    color: #1a202c;
   background-color: #fff;
   width: 100%; /* Full width inside the grid */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for better visual appeal */
