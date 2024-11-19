@@ -1,3 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap'); 
+.shipment-tracker {
+    font-family: 'Hanken Grotesk', sans-serif;
+    background-color: #F0F3FF;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    padding-left: 40px;
+    gap: 20px;
+    height: 100vh;
+    width:96.3vw; /* Full viewport height */
+}
+
 /* Left Sidebar */
 .left-sidebar {
     display: flex;
@@ -127,6 +142,7 @@
     top: 0;
     width: 100%;
 }
+
 /* Left Sidebar */
 .left-sidebar {
     display: flex;
@@ -263,6 +279,7 @@
     background-color: #00307a;
 }
 
+
 /* Other sections of the page */
 .right-content {
     display: grid;
@@ -359,6 +376,7 @@
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
 }
 .chat-container {
     position: relative;  /* Positioning context for the icon and chatbox */
@@ -412,5 +430,21 @@
 
 .chat-buttons button:hover {
     background-color: #00307a;
+}
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 500px;
+    position: relative;
+    margin-top: 50px; /* Push the entire left sidebar content down */
+}
+
+.main-heading {
+    font-size: 2rem; /* Increased font size */
+    font-weight: bold;
+    text-align: left;
+    color: #004aad;
+    margin-top: -20px; /* Adjust spacing specifically for the heading */
 }
 
