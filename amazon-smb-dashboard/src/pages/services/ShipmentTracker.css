@@ -372,7 +372,7 @@
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
+    margin-top: -20px;
 }
 .chat-container {
     position: relative;  /* Positioning context for the icon and chatbox */
@@ -384,7 +384,8 @@
 .chatbot-icon {
     width: 50px;
     cursor: pointer;
-    margin-bottom: 10px; /* Space between icon and chatbox */
+    margin-bottom: 25px;
+    margin-left: 5px; /* Space between icon and chatbox */
 }
 
 .chat-box {
@@ -436,9 +437,11 @@
     margin-top: 50px; /* Push the entire left sidebar content down */
 }
 .main-heading {
-    font-size: 2rem; /* Increased font size */
+    font-size: 2.5rem; /* Increased font size */
     font-weight: bold;
     text-align: left;
-    color: #004aad;
-    margin-top: -20px; /* Adjust spacing specifically for the heading */
+    color: black;
+    margin-top: -75px;
+    width: 400px;
+    padding-left: 20px; /* Adjust spacing specifically for the heading */
 }
