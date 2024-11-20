@@ -1,16 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap'); 
 
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Disable scrollbars */
+    height: 100%; /* Full height of the viewport */
+    width: 100%; /* Full width of the viewport */
+    background-color: F0F3FF;
+}
+
 /* App Layout */
 .app {
     font-family: 'Hanken Grotesk', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: F0F3FF;
   }
   
   .main-content {
     display: flex;
-    min-height: 100vh; /* Full height */
+    height: 80%; /* Full height */
     width: 98.7vw; /* Full width */
     overflow: hidden; /* Prevent any scrollbars */
   }
@@ -22,17 +32,17 @@
   /* Sidebar */
   .sidebar {
     width: 17%; /* Sidebar occupies 20% of the screen width */
-    background-color: #f0f0f0;
+    background-color: #F0F3FF;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     box-sizing: border-box;
   }
   .dashboard-title {
+    margin-top: 80px;
     font-size: 48px; /* Large font size */
     font-weight: bold; /* Bold text */
-    margin-bottom: 20px; /* Add spacing below the title */
     text-align: left; /* Center the text horizontally */
     color: #000; /* Black text color */
   }
@@ -52,6 +62,7 @@
   }
 
   .welcome-text {
+    margin-top: 13px;
     font-size: 16px;
     font-weight: bold;
     color: #000; /* Black color for text */
@@ -77,6 +88,7 @@
     border-radius: 15px; /* Rounded edges */
     background-color: #fff; /* White background for the container */
     box-sizing: border-box;
+    margin-bottom: 10px;
   }
 
   /* Recent Trips Container */
@@ -86,7 +98,7 @@
     border-radius: 15px; /* Rounded edges */
     background-color: #fff; /* White background */
     box-sizing: border-box;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   
   /* Recent Trips Heading */
@@ -150,33 +162,34 @@
   /* Dashboard Content */
   .dashboard {
     flex: 1; /* Dashboard takes up the remaining 80% of the screen */
-    padding: 20px;
-    background-color: #fff;
+    padding: 10px;
+    background-color: #F0F3FF;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     box-sizing: border-box;
     overflow: hidden;
+    margin-bottom: 10px;
   }
   
   .map-container {
     background-color: #e0e0e0;
-    height: 300px;
+    height: 250px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-top: 12px;
+    margin-bottom: 10px;
     flex-shrink: 0; /* Prevent shrinking */
   }
   
   /* Seller Details Section */
 .seller-details {
     background-color: #fff; /* White background */
-    padding: 20px; /* Spacing around the container */
+    padding: 10px; /* Spacing around the container */
     border-radius: 10px; /* Rounded edges */
     border: 2px solid #000000; /* Black border */
-    margin-bottom: 20px; /* Spacing below */
+    margin-bottom: 5px; /* Spacing below */
     text-align: left; /* Align content to the left */
 }
 
@@ -218,7 +231,7 @@
 .metrics {
     display: grid;
     grid-template-columns: repeat(6, 1fr); /* 6 columns for one row */
-    gap: 5px; /* Reduced gap between boxes */
+    gap: 3px; /* Reduced gap between boxes */
   }
   
   .metrics-card {
