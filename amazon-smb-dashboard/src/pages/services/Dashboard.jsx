@@ -22,8 +22,8 @@ const Dashboard = () => {
           <div className="welcome-message">
             <FaUser style={{ fontSize: "0.5em", marginBottom: "10px" }} />
             <span className="welcome-text">
-                Welcome <br />
-                User!
+                <br></br>
+                Welcome User!
             </span>
           </div>
 
