@@ -1,7 +1,7 @@
 // src/components/Navbar.jsx
 import { Link } from "react-router-dom";
 import "./Navbar.css"; // Import the CSS file
-import logo from "/public/images/logo.png"; // Update the path based on your project structure
+import logo from "/images/logo.png"; // Update the path based on your project structure
 import { IoIosDocument } from "react-icons/io";
 import { IconContext } from "react-icons";
 import { FaShippingFast } from "react-icons/fa";
