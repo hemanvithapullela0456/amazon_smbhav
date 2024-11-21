@@ -10,7 +10,8 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
-frontend/dist
+# frontend/dist
+!frontend/dist/
 *.local
 
 # Editor directories and files
@@ -23,3 +24,5 @@ frontend/dist
 *.njsproj
 *.sln
 *.sw?
+
+.vercel
